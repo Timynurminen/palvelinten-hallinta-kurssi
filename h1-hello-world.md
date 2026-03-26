@@ -1,6 +1,6 @@
 # h1 - Hello World!
 
-a) My first task was to create repository
+a) My first task was to create a repository
 
 ## h2 - References
 
