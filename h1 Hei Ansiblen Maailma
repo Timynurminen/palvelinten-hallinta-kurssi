@@ -1,1 +1,70 @@
-h1 Hei Ansiblen Maailma
+# h1 Hei Ansiblen Maailma
+## x) lue ja tiivistä:
+SSH public key - Login without password:
+- SSH on yleinen ja turvallinen tapa kirjautua palvelimille.
+- SSH-palvelin asennetaan paketista ssh ja käynnistetään systemctl enable --now ssh.
+- Yhteys voidaan testata komennolla ssh localhost, jolloin kirjaudutaan samaan koneeseen SSH:n kautta.
+Miten turvallsuus paranee, jos salasanaa ei enää käytetä kirjautumisessa?
+
+Hello Ansible
+- Ansible on konfiguraationhallintatyökalu, jossa infrastruktuuri kuvataan koodina ja muutoksia tehdään vain tarvittaessa.
+- Se toimii SSH:n yli ilman agenttia, mutta kohdekoneessa pitää olla SSH ja Python.
+- Hostit määritellään inventaariossa ja playbook määrittää mitä rooleja ajetaan.
+- Roolit sisältävät tehtäviä, kuten tiedoston luonti, ja lopputulos voidaan tarkistaa esimerkiksi SSH:lla.
+Miten Ansible varmistaa, että sama playbook ei tee turhia muutoksia joka ajokerralla?
+
+## a) Asenna SSH-demoni ja testaa se kirjautumalla SSH:lla
+- Asenna SSH
+sudo apt-get install ssh
+sudo systemctl enable --now ssh
+- Tarkista palvelun tila 
+sudo systemctl status ssh
+- Testaa SSH-yhteys
+ssh localhost
+- Yhteyden onnistuttua poistu komennolla
+exit
+
+## b) Pubkey. Automatisoi ssh-kirjautuminen julkisella avaimella
+- Luo avainpari
+ssh-keygen
+- Kopioi avain localhostille
+ssh-copy-id localhost
+- Testaus, jossa kirjoitat vielä salasanan
+ssh localhost
+- Jos ei kysynyt salasanaa uudelleen se onnistui
+exit
+
+## c) Hei Ansible. Tee hei maailma ansiblella ja kokeile sitä SSH:n yli.
+- Asenna Ansible
+sudo apt-get install ansible
+- Luo Ansible-kansio ja määrittele hostit tiedostoon hosts.ini
+mkdir ansible
+cd ansible
+(sudo apt-get install micro) (jos ei ollut micro tekstieditoria)
+micro hosts.ini
+- hosts.ini sisälle:
+localhost
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+- Lisäksi luodaan tiedosto ansible.cfg, jotta ei tarvitse antaa -i hosts.ini jokaisessa komennossa
+ansible.cfg:
+[defaults]
+inventory = hosts.ini
+- Tee playbook site.yml, joka käyttää roolia hello
+micro site.yml
+site.yml:
+- hosts: all
+  roles:
+    - hello
+mkdir -p roles/hello/tasks
+micro roles/hello/tasks/main.yml
+main.yml:
+- copy:
+    dest: /tmp/hello-ansible
+    content: "Hei maailma Ansiblella\n"
+- aja playbook
+ansible-playbook site.yml
+(changed=1)
+- Lopputuloksen testaus:
+ssh localhost 'cat /tmp/hello-ansible'
