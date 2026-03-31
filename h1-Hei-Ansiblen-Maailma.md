@@ -70,6 +70,6 @@
 - ssh localhost 'cat /tmp/hello-ansible'
 - Hei maailma Ansiblella
 ## Lähteet
-- Karvinen 2026: [SSH public key - Login without password](terokarvinen.com/ssh-public-key-login-without-password/)
-- Karvinen 2026: [Hello Ansible](terokarvinen.com/hello-ansible/)
+- Karvinen 2026: [SSH public key - Login without password](https://terokarvinen.com/ssh-public-key-login-without-password/)
+- Karvinen 2026: [Hello Ansible](https://terokarvinen.com/hello-ansible/)
 - ChatGPT (OpenAI), käytetty apuna komentojen ja virhetilanteiden selvittämiseen 
