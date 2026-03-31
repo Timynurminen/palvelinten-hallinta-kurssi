@@ -63,7 +63,7 @@
 ### hosts.ini sisälle:
 ```bash
 - localhost
-- 
+
 - [all:vars]
 - ansible_python_interpreter=/usr/bin/python3
 ```
@@ -81,9 +81,9 @@
 ```
 #### site.yml:
 ```bash
-- -hosts: all
--   roles:
--   - hello
+ -hosts: all
+   roles:
+   - hello
 ```
 #### main.yml:
 ```bash
