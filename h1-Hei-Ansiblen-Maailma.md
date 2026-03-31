@@ -1,12 +1,12 @@
 # h1 Hei Ansiblen Maailma
 ## x) lue ja tiivistä:
-SSH public key - Login without password:
+### SSH public key - Login without password:
 - SSH on yleinen ja turvallinen tapa kirjautua palvelimille.
 - SSH-palvelin asennetaan paketista ssh ja käynnistetään systemctl enable --now ssh.
 - Yhteys voidaan testata komennolla ssh localhost, jolloin kirjaudutaan samaan koneeseen SSH:n kautta.
 Miten turvallsuus paranee, jos salasanaa ei enää käytetä kirjautumisessa?
 
-Hello Ansible
+### Hello Ansible
 - Ansible on konfiguraationhallintatyökalu, jossa infrastruktuuri kuvataan koodina ja muutoksia tehdään vain tarvittaessa.
 - Se toimii SSH:n yli ilman agenttia, mutta kohdekoneessa pitää olla SSH ja Python.
 - Hostit määritellään inventaariossa ja playbook määrittää mitä rooleja ajetaan.
@@ -25,14 +25,14 @@ ssh localhost
 exit
 
 ## b) Pubkey. Automatisoi ssh-kirjautuminen julkisella avaimella
-- Luo avainpari
-ssh-keygen
-- Kopioi avain localhostille
-ssh-copy-id localhost
-- Testaus, jossa kirjoitat vielä salasanan
-ssh localhost
-- Jos ei kysynyt salasanaa uudelleen se onnistui
-exit
+ ### Luo avainpari
+- ssh-keygen
+ ### Kopioi avain localhostille
+- ssh-copy-id localhost
+### Testaus, jossa kirjoitat vielä salasanan
+- ssh localhost
+### Jos ei kysynyt salasanaa uudelleen se onnistui
+- exit
 
 ## c) Hei Ansible. Tee hei maailma ansiblella ja kokeile sitä SSH:n yli.
 - Asenna Ansible
