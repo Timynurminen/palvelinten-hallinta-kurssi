@@ -52,13 +52,14 @@
 - [defaults]
 - inventory = hosts.ini
 ### Tee playbook site.yml, joka käyttää roolia hello
+```bash
 - micro site.yml
+- mkdir -p roles/hello/tasks
+- micro roles/hello/tasks/main.yml
 #### site.yml:
 - -hosts: all
 -   roles:
 -   - hello
-- mkdir -p roles/hello/tasks
-- micro roles/hello/tasks/main.yml
 #### main.yml:
 -  - copy:
 -      dest: /tmp/hello-ansible
