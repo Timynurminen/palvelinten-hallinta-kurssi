@@ -55,7 +55,7 @@
 - micro site.yml
 #### site.yml:
 - -hosts: all
-   roles:
+-   roles:
 -   - hello
 - mkdir -p roles/hello/tasks
 - micro roles/hello/tasks/main.yml
