@@ -4,14 +4,14 @@
 - SSH on yleinen ja turvallinen tapa kirjautua palvelimille.
 - SSH-palvelin asennetaan paketista ssh ja käynnistetään systemctl enable --now ssh.
 - Yhteys voidaan testata komennolla ssh localhost, jolloin kirjaudutaan samaan koneeseen SSH:n kautta.
-Miten turvallsuus paranee, jos salasanaa ei enää käytetä kirjautumisessa?
+**Oma kysymys:** Miten turvallsuus paranee, jos salasanaa ei enää käytetä kirjautumisessa?
 
 ### Hello Ansible
 - Ansible on konfiguraationhallintatyökalu, jossa infrastruktuuri kuvataan koodina ja muutoksia tehdään vain tarvittaessa.
 - Se toimii SSH:n yli ilman agenttia, mutta kohdekoneessa pitää olla SSH ja Python.
 - Hostit määritellään inventaariossa ja playbook määrittää mitä rooleja ajetaan.
 - Roolit sisältävät tehtäviä, kuten tiedoston luonti, ja lopputulos voidaan tarkistaa esimerkiksi SSH:lla.
-Miten Ansible varmistaa, että sama playbook ei tee turhia muutoksia joka ajokerralla?
+**Oma kysymys:** Miten Ansible varmistaa, että sama playbook ei tee turhia muutoksia joka ajokerralla?
 
 ## a) Asenna SSH-demoni ja testaa se kirjautumalla SSH:lla
 ### Asenna SSH
