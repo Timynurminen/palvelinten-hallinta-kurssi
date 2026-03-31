@@ -87,9 +87,9 @@
 ```
 #### main.yml:
 ```bash
--  - copy:
--      dest: /tmp/hello-ansible
--      content: "Hei maailma Ansiblella\n"
+  - copy:
+      dest: /tmp/hello-ansible
+      content: "Hei maailma Ansiblella\n"
 ```
  ### Aja playbook
  ```bash
