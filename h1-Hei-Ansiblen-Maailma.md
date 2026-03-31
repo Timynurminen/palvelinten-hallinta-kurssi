@@ -14,15 +14,15 @@ Miten turvallsuus paranee, jos salasanaa ei enää käytetä kirjautumisessa?
 Miten Ansible varmistaa, että sama playbook ei tee turhia muutoksia joka ajokerralla?
 
 ## a) Asenna SSH-demoni ja testaa se kirjautumalla SSH:lla
-- Asenna SSH
-sudo apt-get install ssh
-sudo systemctl enable --now ssh
-- Tarkista palvelun tila 
-sudo systemctl status ssh
-- Testaa SSH-yhteys
-ssh localhost
-- Yhteyden onnistuttua poistu komennolla
-exit
+### Asenna SSH
+- sudo apt-get install ssh
+- sudo systemctl enable --now ssh
+### Tarkista palvelun tila 
+- sudo systemctl status ssh
+### Testaa SSH-yhteys
+- ssh localhost
+### Yhteyden onnistuttua poistu komennolla
+- exit
 
 ## b) Pubkey. Automatisoi ssh-kirjautuminen julkisella avaimella
  ### Luo avainpari
@@ -35,36 +35,36 @@ exit
 - exit
 
 ## c) Hei Ansible. Tee hei maailma ansiblella ja kokeile sitä SSH:n yli.
-- Asenna Ansible
-sudo apt-get install ansible
-- Luo Ansible-kansio ja määrittele hostit tiedostoon hosts.ini
-mkdir ansible
-cd ansible
-(sudo apt-get install micro) (jos ei ollut micro tekstieditoria)
-micro hosts.ini
-- hosts.ini sisälle:
-localhost
-
-[all:vars]
-ansible_python_interpreter=/usr/bin/python3
-- Lisäksi luodaan tiedosto ansible.cfg, jotta ei tarvitse antaa -i hosts.ini jokaisessa komennossa
-ansible.cfg:
-[defaults]
-inventory = hosts.ini
-- Tee playbook site.yml, joka käyttää roolia hello
-micro site.yml
-site.yml:
-- hosts: all
-  roles:
-    - hello
-mkdir -p roles/hello/tasks
-micro roles/hello/tasks/main.yml
-main.yml:
-- copy:
-    dest: /tmp/hello-ansible
-    content: "Hei maailma Ansiblella\n"
-- aja playbook
-ansible-playbook site.yml
-(changed=1)
+### Asenna Ansible
+- sudo apt-get install ansible
+### Luo Ansible-kansio ja määrittele hostit tiedostoon hosts.ini
+- mkdir ansible
+- cd ansible
+- (sudo apt-get install micro) (jos ei ollut micro tekstieditoria)
+- micro hosts.ini
+### hosts.ini sisälle:
+- localhost
+- 
+- [all:vars]
+- ansible_python_interpreter=/usr/bin/python3
+### Lisäksi luodaan tiedosto ansible.cfg, jotta ei tarvitse antaa -i hosts.ini jokaisessa komennossa
+#### ansible.cfg:
+- [defaults]
+- inventory = hosts.ini
+### Tee playbook site.yml, joka käyttää roolia hello
+- micro site.yml
+#### site.yml:
+- -hosts: all
+-   roles:
+-   - hello
+- mkdir -p roles/hello/tasks
+- micro roles/hello/tasks/main.yml
+#### main.yml:
+-  - copy:
+-      dest: /tmp/hello-ansible
+-      content: "Hei maailma Ansiblella\n"
+ ### Aja playbook
+- ansible-playbook site.yml
+- (changed=1)
 - Lopputuloksen testaus:
 ssh localhost 'cat /tmp/hello-ansible'
