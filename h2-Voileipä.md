@@ -107,6 +107,11 @@ Olin tehnyt asetukset ensin käsin ja tämän jälkeen automatisoin ne Ansiblell
 
 #### Playbookin ajo
 ```bash
+ansible-playbook site.yml
+```
+ <img width="1197" height="200" alt="image" src="https://github.com/user-attachments/assets/79585458-8c4d-487a-9c6b-a575b1ca83e3" />
+
+```bash
 ansible-playbook site.yml -K
 ```
  <img width="1201" height="524" alt="image" src="https://github.com/user-attachments/assets/ed455bdd-1f06-46b6-ac1a-aeb460ecf3eb" />
@@ -121,9 +126,4 @@ Kirjauduin käyttäjälle timster ja testasin:
 
 #### Sudoers-tiedosto
 
-
-
-
-4. <img width="548" height="35" alt="image" src="https://github.com/user-attachments/assets/0f49129e-05d9-4fa3-8fbd-9972fa20a4aa" />
-
-5. <img width="1197" height="200" alt="image" src="https://github.com/user-attachments/assets/79585458-8c4d-487a-9c6b-a575b1ca83e3" />
+ <img width="548" height="35" alt="image" src="https://github.com/user-attachments/assets/0f49129e-05d9-4fa3-8fbd-9972fa20a4aa" />
