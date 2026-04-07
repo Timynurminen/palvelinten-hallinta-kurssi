@@ -95,7 +95,7 @@
 ## a) Sudoless
 
 Tässä tehtävässä tein Ansiblella käyttäjän timster, jolle automatisoin
-- SSH- kirjautmisen julkisella avaimella
+- SSH- kirjautumisen julkisella avaimella
 - sudo-oikeuden ilman salasanaa
 
 Olin tehnyt asetukset ensin käsin ja tämän jälkeen automatisoin ne Ansiblella (manual before auto)
@@ -132,7 +132,7 @@ Kirjauduin käyttäjälle timster ja testasin:
 
 Käyttäjä timster luotiin jo kohdassa a), jossa automatisoin myös SSH-avaimen lisäämisen Ansiblella.
 
-SSH-kirjautminen ilman salasanaa toteutettiin seuraavalla tehtävällä:
+SSH-kirjautuminen ilman salasanaa toteutettiin seuraavalla tehtävällä:
 
 <img width="1199" height="71" alt="image" src="https://github.com/user-attachments/assets/c906ac35-23fe-4a1b-a7d6-aec098336b53" />
 
@@ -170,7 +170,7 @@ Paketit:
 <img width="1265" height="716" alt="image" src="https://github.com/user-attachments/assets/14471168-27ba-447a-8119-045e328c6188" />
 
 #### Huomio
-Paketit eivät välttämättä asennnu oikein, jos pakettilista ei ole ajan tasalla. 
+Paketit eivät välttämättä asennu oikein, jos pakettilista ei ole ajan tasalla. 
 
 Ratkaisin tämän lisäämällä:
 
@@ -237,7 +237,7 @@ Vain omistaja voi käyttää tiedostoa
 
 ## e) jotain muuta.
 
-Tehtävässä käytin Ansible:n ping-moduulia, jolla voidaan testata että yhteys kohdekoneeseen toimii.
+Tehtävässä käytin Ansiblen ping-moduulia, jolla voidaan testata että yhteys kohdekoneeseen toimii.
 
 #### Komento
 
