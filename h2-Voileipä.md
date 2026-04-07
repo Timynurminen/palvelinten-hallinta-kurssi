@@ -96,7 +96,8 @@
 
 Tässä tehtävässä tein Ansiblella käyttäjän timster, jolle automatisoin
 - SSH- kirjautmisen julkisella avaimella
-- sudo-oikeuden ilman salasanaa \n
+- sudo-oikeuden ilman salasanaa
+
 Olin tehnyt asetukset ensin käsin ja tämän jälkeen automatisoin ne Ansiblella (manual before auto)
 
 #### Playbookin ajo
