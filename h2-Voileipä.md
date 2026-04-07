@@ -198,11 +198,11 @@ Sisältö:
 
 #### Testaus
 
-<img width="711" height="43" alt="image" src="https://github.com/user-attachments/assets/835319f5-5f29-4fdd-a399-92272a1242f7" />
 
 ```bash
 sudo micro /tmp/ansible-tiedosto.txt
 ```
+
 <img width="349" height="70" alt="image" src="https://github.com/user-attachments/assets/8eb9dce8-6708-411e-b2f7-4f04952c011c" />
 
 ```bash
@@ -212,6 +212,8 @@ sudo cat /tmp/ansible-tiedosto.txt
 <img width="678" height="79" alt="image" src="https://github.com/user-attachments/assets/e314ff5c-3640-41ac-afc3-41508eea3f87" />
 
 ### Oikeudet
+
+<img width="711" height="43" alt="image" src="https://github.com/user-attachments/assets/835319f5-5f29-4fdd-a399-92272a1242f7" />
 
 Oktaalimuodossa:
 - 0600
