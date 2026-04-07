@@ -234,3 +234,31 @@ Symbolisessa muodossa:
   - ei oikeuksia
 
 Vain omistaja voi käyttää tiedostoa
+
+## e) jotain muuta.
+
+Tehtävässä käytin Ansible:n ping-moduulia, jolla voidaan testata että yhteys kohdekoneeseen toimii.
+
+#### Komento
+
+```bash
+ansible all -m ping
+```
+
+#### Testaus
+
+<img width="536" height="97" alt="image" src="https://github.com/user-attachments/assets/d85c67ad-0de5-4e72-9e7a-a0da305bddb5" />
+
+#### Miksi?
+
+- ping-moduulilla voi testata nopeasti, että Ansible-yhteys toimii
+- pong-vastaus kertoo, että yhteys ja perusasetukset ovat kunnossa
+- hyödyllinen nopea testi ennen playbookkien ajoa.
+
+
+## Lähteet
+
+- Karvinen 2026: [Sudo without password](https://terokarvinen.com/passwordless-sudo/)
+- Karvinen 2026: [Passwordless Sudo with Ansible](https://terokarvinen.com/passwordless-sudo-with-ansible/)
+- Ansible Community Documentation 2026: [docs.ansible](https://docs.ansible.com/projects/ansible/latest/collections/ansible/index.html)
+
