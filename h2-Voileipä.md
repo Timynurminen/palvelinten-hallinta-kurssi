@@ -36,7 +36,7 @@
   - Voisiko sudo-oikeudet rajata vain tiettyihin komentoihin turvallisuuden parantamiseksi?
 ### Ansible-doc
 - copy
-- - Moduuli kopioi tiedostoja tai kirjoittaa sisältö kohdekoneelle
+  - Moduuli kopioi tiedostoja tai kirjoittaa sisältö kohdekoneelle
   - content: tiedoston sisältö suoraan
   - src: lähdetiedosto
   - dest: kohdepolku
