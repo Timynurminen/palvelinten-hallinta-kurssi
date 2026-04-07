@@ -48,7 +48,7 @@
         dest: /tmp/testi.txt
     ```
 - apt
-- - Moduuli hallitsee Debian/Ubuntu-paketteja
+  - Moduuli hallitsee Debian/Ubuntu-paketteja
   - name: paketin nimi
   - state: present (asennettu) / absent (poistettu)
   - update_cache: päivittää pakettilistan
@@ -60,7 +60,7 @@
       update_cache: yes
     ```
 - file
-- - Moduuli hallitsee tiedostoja ja hakemistoja
+  - Moduuli hallitsee tiedostoja ja hakemistoja
   - path: kohteen polku
   - state: file / directory
   - recurse: koskee myös alihakemistoja
@@ -72,7 +72,7 @@
       state: directory
   ```
 - user
-- - Moduuli hallitsee käyttäjiä
+  - Moduuli hallitsee käyttäjiä
   - name: käyttäjän nimi
   - create_home: luo kotihakemisto
   - comment: kuvaus
@@ -88,8 +88,25 @@
       shell: /bin/bash
   ```
 - authorized key
-- - Moduuli lisää SSH-avaimen käyttäjälle
+  - Moduuli lisää SSH-avaimen käyttäjälle
   - user: käyttäjä
   - key: julkinen SSH-avain 
       
+## a) Sudoless
 
+Tässä tehtävässä tein Ansiblella käyttäjän timster, jolle automatisoin
+- SSH- kirjautmisen julkisella avaimella
+- sudo-oikeuden ilman salasanaa
+
+#### Playbook (roles/timster/tasks/main.yml)
+
+1. <img width="1018" height="265" alt="image" src="https://github.com/user-attachments/assets/174d7ddf-3a79-4766-ad0d-579e57d89f46" />
+
+
+2. <img width="1201" height="524" alt="image" src="https://github.com/user-attachments/assets/ed455bdd-1f06-46b6-ac1a-aeb460ecf3eb" />
+
+3. <img width="417" height="266" alt="image" src="https://github.com/user-attachments/assets/88da6ea4-fcb1-4c33-a597-ad261c73af5b" />
+
+4. <img width="548" height="35" alt="image" src="https://github.com/user-attachments/assets/0f49129e-05d9-4fa3-8fbd-9972fa20a4aa" />
+
+5. <img width="1197" height="200" alt="image" src="https://github.com/user-attachments/assets/79585458-8c4d-487a-9c6b-a575b1ca83e3" />
