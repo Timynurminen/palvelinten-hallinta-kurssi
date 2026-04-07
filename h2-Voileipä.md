@@ -97,8 +97,13 @@
 Tässä tehtävässä tein Ansiblella käyttäjän timster, jolle automatisoin
 - SSH- kirjautmisen julkisella avaimella
 - sudo-oikeuden ilman salasanaa
+Olin tehnyt asetukset ensin käsin ja tämän jälkeen automatisoin ne Ansiblella (manual before auto)
 
-#### Playbook (roles/timster/tasks/main.yml)
+#### Playbookin ajo
+```bash
+ansible-playbook site.yml -K
+```
+
 
 1. <img width="1018" height="265" alt="image" src="https://github.com/user-attachments/assets/174d7ddf-3a79-4766-ad0d-579e57d89f46" />
 
