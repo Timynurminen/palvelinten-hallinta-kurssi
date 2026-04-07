@@ -6,7 +6,7 @@
 - Luodaan käyttäjä ja lisätään se ryhmään (esim. sudoless)
 - Sudoers-tiedostoon lisätään sääntö:
   ```bash
-  %sudoless aLL = (ALL) NOPASSWD: ALL
+  %sudoless ALL = (ALL) NOPASSWD: ALL
   ```
 - visudo-komennolla muokataan sudo-asetuksia turvallisesti
 - Muutokset vaativat uudelleenkirjautumisen ennen kuin toimivat
@@ -25,7 +25,7 @@
 
 - Ansible-rooli voi automatisoida käyttäjän SSH-avaimen ja salasanattoman sudon
 - Luodaan sudoless-ryhmä ja lisätään käyttäjä siihen
-- Lisätään sudoers-sääntö tiedostoon /etc/sudoers-d/
+- Lisätään sudoers-sääntö tiedostoon /etc/sudoers.d/
   ```bash
   %sudoless ALL = (ALL) NOPASSWD: ALL
   ```
@@ -43,7 +43,7 @@
   - owner/group/mode: omistaja, ryhmä ja oikeudet
   - Esimerkki:
     ```bash
-    -copy:
+    - copy:
         content: "Hei maailma\n"
         dest: /tmp/testi.txt
     ```
@@ -56,7 +56,7 @@
     ```bash
     -apt:
       name: nginx
-      state: presenet
+      state: present
       update_cache: yes
     ```
 - file
@@ -87,7 +87,7 @@
       create_home: yes
       shell: /bin/bash
   ```
-- authorized key
+- authorized_key
   - Moduuli lisää SSH-avaimen käyttäjälle
   - user: käyttäjä
   - key: julkinen SSH-avain 
@@ -127,3 +127,44 @@ Kirjauduin käyttäjälle timster ja testasin:
 ### Sudoers-tiedosto
 
  <img width="548" height="35" alt="image" src="https://github.com/user-attachments/assets/0f49129e-05d9-4fa3-8fbd-9972fa20a4aa" />
+
+## b) Tee salasanaton, automaattisesti ssh:lla kirjautuva tunnus Ansiblella
+
+Käyttäjä timster luotiin jo kohdassa a), jossa automatisoin myös SSH-avaimen lisäämisen Ansiblella.
+
+SSH-kirjautminen ilman salasanaa toteutettiin seuraavalla tehtävällä:
+
+<img width="1199" height="71" alt="image" src="https://github.com/user-attachments/assets/c906ac35-23fe-4a1b-a7d6-aec098336b53" />
+
+Testasin kirjautumisen:
+
+<img width="1069" height="213" alt="image" src="https://github.com/user-attachments/assets/82144cdd-445f-4cb6-bbb6-ad432922bcaa" />
+
+Kirjautuminen onnistui ilman salasanaa
+
+## c) Package. Asenna kaksi pakettia Ansiblella.
+
+#### Tässä tehtävässä asensin kaksi pakettia Ansiblella käyttäen apt-moduulia
+Paketit:
+- htop
+- tree
+
+#### site.yml:
+
+<img width="248" height="181" alt="image" src="https://github.com/user-attachments/assets/637f80c3-2a1f-4228-8ad3-0b49c6db63b9" />
+
+#### roles/package/tasks/main.yml
+
+<img width="238" height="127" alt="image" src="https://github.com/user-attachments/assets/6031ec41-5f45-4f0e-a6f9-ff1988ebb85d" />
+
+#### playbookin ajo:
+
+<img width="1181" height="539" alt="image" src="https://github.com/user-attachments/assets/34cf6a1c-3c18-482a-997b-0f564ec8a8cd" />
+
+#### tree package testaus sekä samalla treen näyttö:
+
+<img width="384" height="318" alt="image" src="https://github.com/user-attachments/assets/e5944f78-5573-448e-9393-041187874505" />
+
+#### htop testaus:
+
+<img width="1265" height="716" alt="image" src="https://github.com/user-attachments/assets/14471168-27ba-447a-8119-045e328c6188" />
