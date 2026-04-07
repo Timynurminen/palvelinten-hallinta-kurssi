@@ -110,13 +110,17 @@ Olin tehnyt asetukset ensin käsin ja tämän jälkeen automatisoin ne Ansiblell
 ansible-playbook site.yml -K
 ```
  <img width="1201" height="524" alt="image" src="https://github.com/user-attachments/assets/ed455bdd-1f06-46b6-ac1a-aeb460ecf3eb" />
+ 
 Ensimmäisellä ajokerralla tuli:
 - changed=4: Ansible teki muutoksia
 
 #### Sudo toimii ilman salasanaa
 Kirjauduin käyttäjälle timster ja testasin:
 
-1. <img width="1018" height="265" alt="image" src="https://github.com/user-attachments/assets/174d7ddf-3a79-4766-ad0d-579e57d89f46" />
+<img width="1018" height="265" alt="image" src="https://github.com/user-attachments/assets/174d7ddf-3a79-4766-ad0d-579e57d89f46" />
+
+#### Sudoers-tiedosto
+
 
 
 
