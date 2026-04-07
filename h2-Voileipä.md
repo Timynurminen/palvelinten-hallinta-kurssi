@@ -161,10 +161,74 @@ Paketit:
 
 <img width="1181" height="539" alt="image" src="https://github.com/user-attachments/assets/34cf6a1c-3c18-482a-997b-0f564ec8a8cd" />
 
-#### tree package testaus sekä samalla treen näyttö:
+#### tree package testaus sekä samalla tree:n näyttö:
 
 <img width="384" height="318" alt="image" src="https://github.com/user-attachments/assets/e5944f78-5573-448e-9393-041187874505" />
 
 #### htop testaus:
 
 <img width="1265" height="716" alt="image" src="https://github.com/user-attachments/assets/14471168-27ba-447a-8119-045e328c6188" />
+
+#### Huomio
+Paketit eivät välttämättä asennnu oikein, jos pakettilista ei ole ajan tasalla. 
+
+Ratkaisin tämän lisäämällä:
+
+```bash
+update_cache: yes
+```
+
+## d) File.
+
+Tässä tehtävässä loin Ansiblella useamman rivin sisältävän tiedoston ja määrittelin sille omistajan, ryhmän ja oikeudet.
+
+#### Playbook roles/file/tasks/main.yml
+
+Sisältö:
+
+<img width="542" height="178" alt="image" src="https://github.com/user-attachments/assets/d80c8071-0e62-466c-b08d-167ec346725b" />
+
+#### site.yml päivitys
+
+<img width="165" height="152" alt="image" src="https://github.com/user-attachments/assets/21a83d65-05dd-450e-986c-fd4da24b8057" />
+
+#### Playbookin ajo
+
+<img width="1166" height="606" alt="image" src="https://github.com/user-attachments/assets/da7ab2e8-4ab0-4e4a-a059-f54912d17f1d" />
+
+#### Testaus
+
+<img width="711" height="43" alt="image" src="https://github.com/user-attachments/assets/835319f5-5f29-4fdd-a399-92272a1242f7" />
+
+```bash
+sudo micro /tmp/ansible-tiedosto.txt
+```
+<img width="349" height="70" alt="image" src="https://github.com/user-attachments/assets/8eb9dce8-6708-411e-b2f7-4f04952c011c" />
+
+```bash
+sudo cat /tmp/ansible-tiedosto.txt
+```
+
+<img width="678" height="79" alt="image" src="https://github.com/user-attachments/assets/e314ff5c-3640-41ac-afc3-41508eea3f87" />
+
+### Oikeudet
+
+Oktaalimuodossa:
+- 0600
+
+Symbolisessa muodossa:
+
+```bash
+-rw-------
+```
+
+#### Mitä oikeudet tarkoittavat
+- Omistaja (timster):
+  - Saa lukea (r)
+  - Saa kirjoittaa (w)
+- Ryhmä:
+  - ei oikeuksia
+- Muut käyttäjät:
+  - ei oikeuksia
+
+Vain omistaja voi käyttää tiedostoa
