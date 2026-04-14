@@ -123,8 +123,11 @@ chmod ugo+x /home/timyn
 cmohd ugo+x /home/timyn/publicsite
 chmod ugo+r /home/timyn/publicsite/index.html
 ```
+
 <img width="710" height="63" alt="image" src="https://github.com/user-attachments/assets/cece0402-2dd6-443e-863d-af24865d333f" />
+
 kuvassa pieni virhe, jonka korjasin komennolla:
+
 ```bash
 chmod 644 /home/timyn/publicsite/index.html
 ```
