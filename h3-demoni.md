@@ -69,4 +69,75 @@
     state: started
     enabled: true
 ```
+#### Oma kysymys:
 
+- Mikä ero on restarted ja reloaded, ja milloin kumpaa pitäisi käyttää?
+
+## a) Apassi. Asenna Apache 2 käsin.
+
+Tässä tehtävässä asensin Apache2-webpalvelimen käsin ja tein etusivun, jota voi muokata tavallisena käyttäjänä ilman sudo-oikeuksia
+
+### Apache asennus
+
+```bash
+sudo apt-get update
+sudo apt-get install apache2
+```
+<img width="771" height="334" alt="image" src="https://github.com/user-attachments/assets/21bf7648-0f63-4ba9-98ba-14ffd1d98e9d" />
+
+### Käynnistys ja status
+
+```bash
+sudo systemctl enable --now apache2
+sudo systemctl status apache2
+```
+<img width="1071" height="135" alt="image" src="https://github.com/user-attachments/assets/5eda0f6b-6143-4efa-aa06-2411c3b5fd98" />
+
+### Testaus selaimessa
+
+Avasin selaimessa: 
+```bash
+firefox http://localhost
+```
+<img width="870" height="189" alt="image" src="https://github.com/user-attachments/assets/2635d8e6-f82f-4f7e-8751-0bb13ba99baa" />
+
+### Oman sivun tekeminen käyttäjälle
+
+Loin kansion käyttäjän kotihakemistoon:
+
+```bash
+mkdir -p ~/publicsite
+micro ~/publicsite/index.html
+```
+Sisältö: 
+```html
+<h1> Apassi </h1>
+<p> Toimii! </p>
+```
+<img width="311" height="90" alt="image" src="https://github.com/user-attachments/assets/cf4a8384-e1be-4419-87ec-26769c0967b4" />
+
+### Oikeudet
+
+```bash
+chmod ugo+x /home/timyn
+cmohd ugo+x /home/timyn/publicsite
+chmod ugo+r /home/timyn/publicsite/index.html
+```
+<img width="710" height="63" alt="image" src="https://github.com/user-attachments/assets/cece0402-2dd6-443e-863d-af24865d333f" />
+<img width="535" height="20" alt="image" src="https://github.com/user-attachments/assets/0557d3e5-acbb-4791-9db9-f6dc9b049e61" />
+<img width="515" height="22" alt="image" src="https://github.com/user-attachments/assets/154ec88e-0a34-4d79-b286-fe877ee0c9a9" />
+
+### Apache konfiguraatio
+```bash
+sudo micro /etc/apache2/sites-available/000-default.conf
+```
+Muokkasin: 
+```apache
+Documentroot /home/timyn/publicsite
+```
+Lisäsin myös:
+```apache
+<Directory /home/timyn/publicsite>
+      Require all granted
+</Directory>
+```
