@@ -308,9 +308,7 @@ Uudelleenajo:
 
 <img width="1157" height="51" alt="image" src="https://github.com/user-attachments/assets/eda434b1-5a72-4412-b1be-02f9a73fd24f" />
 
-### Konfiguraation testaus
 
-Testasin Nginx-konfiguraation syntaksin ennen uudelleenkäynnisy
 ### Testaus selaimessa
 
 <img width="467" height="213" alt="image" src="https://github.com/user-attachments/assets/df1c5127-4025-4c19-8c0c-543a81d0df11" />
