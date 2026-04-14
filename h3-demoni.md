@@ -275,6 +275,7 @@ mkdir -p roles/nginx/handlers
 mkdir -p roles/nginx/files
 ```
 Kansiorakenne:
+
 <img width="422" height="445" alt="image" src="https://github.com/user-attachments/assets/9ee7f3fc-3e57-42b0-b0fb-17acc36faee0" />
 
 ### site.yml
