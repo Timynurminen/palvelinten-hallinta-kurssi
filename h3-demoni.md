@@ -284,7 +284,8 @@ Kansiorakenne:
 
 ### roles/nginx/tasks/main.yml
 
-<img width="498" height="513" alt="image" src="https://github.com/user-attachments/assets/35bece56-77ec-4c11-881b-7268b60ddb1c" />
+<img width="485" height="587" alt="image" src="https://github.com/user-attachments/assets/c0c7214a-dfc9-48a8-9a2e-4e8c510047e4" />
+
 
 ### roles/nginx/handlers/main.yml
 
@@ -307,6 +308,9 @@ Uudelleenajo:
 
 <img width="1157" height="51" alt="image" src="https://github.com/user-attachments/assets/eda434b1-5a72-4412-b1be-02f9a73fd24f" />
 
+### Konfiguraation testaus
+
+Testasin Nginx-konfiguraation syntaksin ennen uudelleenkäynnisy
 ### Testaus selaimessa
 
 <img width="467" height="213" alt="image" src="https://github.com/user-attachments/assets/df1c5127-4025-4c19-8c0c-543a81d0df11" />
@@ -325,10 +329,17 @@ Käytin konfiguraatiotiedoston kopioinnissa:
 ```yaml
 notify: restart nginx
 ```
-Nginx käynnistyy uudelleen vain jos tiedosto muuttuu
+Nginx käynnistyy uudelleen vain jos konfiguraatiotiedosto muuttuu
 
 ### Ongelma ja ratkaisu
 
 Apache ja Nginx yrittää käyttää samaa porttia 80
 
 Ratkaisin tämän pysäyttämällä Apachen Ansiblella ennen Nginxin käynnistämistä.
+
+## Lähteet:
+
+- Karvinen 2026: [Apache installed with Ansible - quick notes](https://terokarvinen.com/apache-ansible/)
+- Ansible Community Documentation 2026: [docs.ansible](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_handlers.html)
+- Nginx documentation: [docs.nginx](https://docs.nginx.com/)
+- Nginx for beginners: [Beginner's Guide](https://nginx.org/en/docs/beginners_guide.html)
