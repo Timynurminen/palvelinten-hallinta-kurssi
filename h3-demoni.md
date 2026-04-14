@@ -253,3 +253,81 @@ firefox http://localhost
 <img width="391" height="196" alt="image" src="https://github.com/user-attachments/assets/c6b34403-ca95-4448-adfa-4c49fe7fede3" />
 
 ## c) Automoottorix. Automatisoi Nginx asennus Ansiblella.
+
+Tässä tehtävässä automatisoin Nginx-asennuksen Ansiblella.
+
+Tein Ansiblella ylläpitäjän osuuden eli:
+
+- Apache pois päältä
+- Nginx asennus
+- Nginx konfiguraatio
+- Palvelun käynnistys ja uudelleenkäynnistys tarvittaessa
+
+Itse HTML-sivun tein käsin edellisessä kohdassa käyttäjän hakemistoon.
+
+### Projektin rakenne
+
+Loin uuden roolin:
+
+```bash
+mkdir -p roles/nginx/tasks
+mkdir -p roles/nginx/handlers
+mkdir -p roles/nginx/files
+```
+Kansiorakenne:
+<img width="422" height="445" alt="image" src="https://github.com/user-attachments/assets/9ee7f3fc-3e57-42b0-b0fb-17acc36faee0" />
+
+### site.yml
+
+<img width="213" height="176" alt="image" src="https://github.com/user-attachments/assets/9bd39727-f7fc-48ee-bac9-3b7fc2f569e5" />
+
+### roles/nginx/tasks/main.yml
+
+<img width="498" height="513" alt="image" src="https://github.com/user-attachments/assets/35bece56-77ec-4c11-881b-7268b60ddb1c" />
+
+### roles/nginx/handlers/main.yml
+
+<img width="325" height="94" alt="image" src="https://github.com/user-attachments/assets/311c9b66-49c9-4261-ab87-5635a1075746" />
+
+### roles/nginx/files/default
+
+Tähän tiedostoon laitoin Nginx konfiguraation, jossa root osoittaa käyttäjän tekemään publicsite-hakemistoon.
+
+<img width="484" height="304" alt="image" src="https://github.com/user-attachments/assets/f1e2bea5-cf1c-4b46-bac4-945e735e8193" />
+
+### Playbookin ajo
+
+```bash
+ansible-playbook site.yml -K
+```
+<img width="1209" height="49" alt="image" src="https://github.com/user-attachments/assets/1a994504-c263-4259-86e8-0ff17208881a" />
+
+Uudelleenajo:
+
+<img width="1157" height="51" alt="image" src="https://github.com/user-attachments/assets/eda434b1-5a72-4412-b1be-02f9a73fd24f" />
+
+### Testaus selaimessa
+
+<img width="467" height="213" alt="image" src="https://github.com/user-attachments/assets/df1c5127-4025-4c19-8c0c-543a81d0df11" />
+
+### Testaus SSH:n kautta
+
+```bash
+ssh timster@localhost
+```
+<img width="505" height="65" alt="image" src="https://github.com/user-attachments/assets/ab937acf-8db8-4c33-a702-827d3a91c754" />
+
+### Handlerin toiminta
+
+Käytin konfiguraatiotiedoston kopioinnissa:
+
+```yaml
+notify: restart nginx
+```
+Nginx käynnistyy uudelleen vain jos tiedosto muuttuu
+
+### Ongelma ja ratkaisu
+
+Apache ja Nginx yrittää käyttää samaa porttia 80
+
+Ratkaisin tämän pysäyttämällä Apachen Ansiblella ennen Nginxin käynnistämistä.
