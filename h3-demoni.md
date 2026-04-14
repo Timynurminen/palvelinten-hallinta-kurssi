@@ -141,3 +141,15 @@ Lisäsin myös:
       Require all granted
 </Directory>
 ```
+<img width="849" height="629" alt="image" src="https://github.com/user-attachments/assets/0eb30c7d-0efb-4f43-a1a2-fcc95626423d" />
+
+### Apachen uudelleenkäynnistys
+
+<img width="564" height="25" alt="image" src="https://github.com/user-attachments/assets/40980ed2-8016-406d-bf7c-2a184d28df32" />
+
+### Lopputulos:
+```bash
+firefox http://localhost
+```
+<img width="1279" height="222" alt="image" src="https://github.com/user-attachments/assets/fc2937e0-4ea0-4b0a-b3b0-50db1763c191" />
+
