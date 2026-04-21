@@ -148,7 +148,44 @@ psql -tac "SHOW config_file;"
 
 #### Playbookin ajo
 
-<img width="1257" height="216" alt="image" src="https://github.com/user-attachments/assets/99511e73-26db-4483-acf9-2a788a44c1c0" />
+<img width="1263" height="334" alt="image" src="https://github.com/user-attachments/assets/166601d6-f997-42ae-b213-95b0074d0366" />
 
 #### Asetuksen tarkistus
 
+<img width="821" height="101" alt="image" src="https://github.com/user-attachments/assets/3d6e6e4c-bb52-4fef-8c13-904e769a5bfe" />
+
+Testasin myös lokeja:
+
+<img width="1135" height="442" alt="image" src="https://github.com/user-attachments/assets/a8de724d-05cb-4ad0-ac09-5a4045c325ec" />
+
+## d) Paikka remonttiin.
+
+#### Rikotaan koko järjestelmä!
+
+```bash
+sudo apt-get purge postgresql*
+```
+
+#### Todisteet
+
+<img width="537" height="80" alt="image" src="https://github.com/user-attachments/assets/1909618f-4429-46b4-a281-9197efb0bc6b" />
+
+#### Ansiblella korjaaminen
+
+<img width="1262" height="274" alt="image" src="https://github.com/user-attachments/assets/cfb92828-66a9-41ac-9b3d-153059ed8c53" />
+
+<img width="814" height="98" alt="image" src="https://github.com/user-attachments/assets/0079199a-c544-4563-9806-dbf78b23726f" />
+
+## e) Idempotentti
+
+Tässä tehtävässä osoitin, että PostgreSQL- tilani on idempotentti.
+
+Ajoin saman Ansible-playbookin uudelleen ilman että muutin mitään asetuksia.
+
+<img width="1255" height="278" alt="image" src="https://github.com/user-attachments/assets/46386690-5445-42c5-bb25-45739426b067" />
+
+### Mitä opin
+
+- Idempotenssi on tärkeä osa konfiguraationhallintaa
+- Sama playbook voidaan ajaa useita kertoja ilman haittaa
+- Ansible kertoo idempotenssin käytännössä changed=0 tuloksella
