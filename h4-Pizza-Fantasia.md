@@ -76,6 +76,7 @@ Loin uuden roolin:
 
 <img width="648" height="39" alt="image" src="https://github.com/user-attachments/assets/2777e1e2-b1ff-43a7-8a2d-9979d4a7795f" />
 
+
 <img width="232" height="69" alt="image" src="https://github.com/user-attachments/assets/ac1197dc-a84d-4e00-9f20-dd427dced041" />
 
 #### site.yml
@@ -116,6 +117,8 @@ Valitsin kaksi asetusta:
 #### Tarvittavat kansiot
 
 <img width="681" height="57" alt="image" src="https://github.com/user-attachments/assets/3996a82b-10d9-4ca6-a421-0e24903f6837" />
+
+
 <img width="242" height="97" alt="image" src="https://github.com/user-attachments/assets/d93b9861-fbcc-4f23-b2a3-12cc91cdd0c9" />
 
 #### Asetustiedosto
@@ -154,7 +157,9 @@ psql -tac "SHOW config_file;"
 
 <img width="821" height="101" alt="image" src="https://github.com/user-attachments/assets/3d6e6e4c-bb52-4fef-8c13-904e769a5bfe" />
 
+
 Testasin myös lokeja:
+
 
 <img width="1135" height="442" alt="image" src="https://github.com/user-attachments/assets/a8de724d-05cb-4ad0-ac09-5a4045c325ec" />
 
@@ -172,9 +177,12 @@ sudo apt-get purge postgresql*
 
 #### Ansiblella korjaaminen
 
+
 <img width="1262" height="274" alt="image" src="https://github.com/user-attachments/assets/cfb92828-66a9-41ac-9b3d-153059ed8c53" />
 
+
 <img width="814" height="98" alt="image" src="https://github.com/user-attachments/assets/0079199a-c544-4563-9806-dbf78b23726f" />
+
 
 ## e) Idempotentti
 
