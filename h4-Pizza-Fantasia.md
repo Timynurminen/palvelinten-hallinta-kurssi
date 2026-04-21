@@ -202,10 +202,10 @@ Ajoin saman Ansible-playbookin uudelleen ilman että muutin mitään asetuksia.
 ## Lähteet:
 
 - Karvinen 2023: [Configuration Management of Distributed Systems over Unreliable and Hostile Networks](https://westminsterresearch.westminster.ac.uk/item/w7vvz/configuration-management-of-distributed-systems-over-unreliable-and-hostile-networks) (4.12.1-4.12.3)
-- [Ansible Community Docs Handlers](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_handlers.html)
-- [Setting parameters PostgreSQL](https://www.postgresql.org/docs/current/config-setting.html)
-- [Ansible Community Docs Variables](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_variables.html)
-- [Ansible Community Docs Filters](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_filters.html)
-- [PostgreSQL File Locations](https://www.postgresql.org/docs/current/runtime-config-file-locations.html)
-- [PostgreSQL Connections and Authentication](https://www.postgresql.org/docs/current/runtime-config-connection.html)
-- [PostgreSQL Error Reporting and Logging](https://www.postgresql.org/docs/current/runtime-config-logging.html)
+- [Ansible Community Docs: Handlers](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_handlers.html)
+- [PostgreSQL: Setting parameters](https://www.postgresql.org/docs/current/config-setting.html)
+- [Ansible Community Docs: Variables](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_variables.html)
+- [Ansible Community Docs: Filters](https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_filters.html)
+- [PostgreSQL: File Locations](https://www.postgresql.org/docs/current/runtime-config-file-locations.html)
+- [PostgreSQL: Connections and Authentication](https://www.postgresql.org/docs/current/runtime-config-connection.html)
+- [PostgreSQL: Error Reporting and Logging](https://www.postgresql.org/docs/current/runtime-config-logging.html)
