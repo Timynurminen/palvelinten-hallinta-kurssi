@@ -133,7 +133,124 @@ Git näytti, että README.md oli muuttunut
 <img width="710" height="193" alt="image" src="https://github.com/user-attachments/assets/c1abb93f-14e9-4f87-a6c2-c9d7896ff9b8" />
 
 
-Poistin huonon muutoksen komennolla:
+
+Poistin huonon muutoksen komennolla: 
+
+```bash
+git reset --hard
+```
+
+Ja tarkistin tilanteen uudelleen: 
+
+```bash
+git status
+cat README.md
+```
 
 
 <img width="624" height="271" alt="image" src="https://github.com/user-attachments/assets/34bafc34-5c0c-4bc1-9f3f-4a3c996844ee" />
+
+
+Huono muutos oli poistunut ja Git näytti, että työpuu oli siisti.
+
+#### Huomio
+
+```bash
+git reset --hard
+```
+Poistaa committoimattomat muutokset, eikä niitä saa normaalisti enää takaisin.
+
+## d) Tukki.
+
+Tarkastelin varaston commit-historiaa komennolla:
+```bash
+git log
+```
+Komento näyttää jokaisesta commitista tunnisteen, tekijän nimen, s-postin, ajankohdan ja commit-viestin.
+
+
+
+<img width="877" height="234" alt="image" src="https://github.com/user-attachments/assets/f308419b-c38d-4b63-866b-31bd092ec1e7" />
+
+Tämän lisäksi tarkistelin tarkemmin tiedostoihin tehtyjä muutoksia komennolla
+```bash
+git log --patch
+```
+Tämä komento näyttää commit-historian lisäksi myös rivikohtaiset muutokset tiedostoihin. Esimerkiksi README.md-tiedostoon lisätyt rivit näkyvät vihreällä +-merkillä, mikä helpottaa muutosten hahmottamista.
+
+Kuvasta näkee, että lisäsin README.md tiedostoon uuden "Local update"-osion ja tekstirivin virtuaalikoneelta tehdystä muutoksesta.
+
+
+
+<img width="905" height="633" alt="image" src="https://github.com/user-attachments/assets/c77434c4-5f43-4111-bedf-f606907ce41a" />
+
+
+Tarkistin myös Gitin käyttäjätiedot:
+```bash
+git config --global user.name
+git config --global user.email
+```
+Nimi ja s-postiosoite näkyivät oikein commit-historiassa, joten niitä ei tarvinnut muokata.
+
+
+<img width="759" height="81" alt="image" src="https://github.com/user-attachments/assets/6d2dccab-86ca-4d74-9a1a-d0d03d4a3c8b" />
+
+
+### Lopputulos
+
+- Commit-historia toimii oikein
+- Muutokset tiedostoihin ovat nähtävissä selkeästi
+- Käyttäjätiedot näkyvät Commitissa oikein
+
+## e) Gitanbile.
+
+Laitoin Ansible-kansion versionhallintaan
+
+```bash
+cd ansible
+git init
+```
+
+Lisäksi tein .gitignore-tiedoston, jotta turhia tiedostoja ei tallenneta versionhallintaan.
+
+Tein pienen muutoksen site.yml-tiedostoon lisäämällä kommentin.
+
+```yaml
+# Ansible config managed with Git
+```
+
+
+<img width="433" height="251" alt="image" src="https://github.com/user-attachments/assets/75d36bae-06e1-4184-8a70-3b2d69f3c0b3" />
+
+
+
+Ajoin Ansible-playbookin muutoksen jälkeen:
+
+```bash
+ansible-playbook site.yml -K
+```
+
+<img width="1248" height="56" alt="image" src="https://github.com/user-attachments/assets/c13b1f85-a11f-46ee-b376-058bb1a539b9" />
+
+
+Muokkausten jälkeen katsoin statuksen:
+
+
+<img width="770" height="261" alt="image" src="https://github.com/user-attachments/assets/e3b2148f-8b7b-4517-bec2-980480d94966" />
+
+
+Lopuksi tallensin version:
+
+```bash
+git add --all
+git commit -m "Track Ansible Configuration"
+```
+
+
+<img width="782" height="456" alt="image" src="https://github.com/user-attachments/assets/130d1414-62ab-4ec4-9fed-c9ab3f6f082a" />
+
+
+
+## f) Pari
+
+Pari hankittu.
