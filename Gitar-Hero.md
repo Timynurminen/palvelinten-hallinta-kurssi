@@ -122,8 +122,18 @@ Tämän jälkeen kaikki toimi kuten piti.
 
 ## c) Doh!
 
+Tein tarkoituksella huonon muutoksen README.md tiedostoon, mutta en tehnyt siitä committia
+
 <img width="519" height="243" alt="image" src="https://github.com/user-attachments/assets/8e06a222-eff7-41cb-ae4f-dea7d1bd467e" />
 
+
+Git näytti, että README.md oli muuttunut
+
+
 <img width="710" height="193" alt="image" src="https://github.com/user-attachments/assets/c1abb93f-14e9-4f87-a6c2-c9d7896ff9b8" />
+
+
+Poistin huonon muutoksen komennolla:
+
 
 <img width="624" height="271" alt="image" src="https://github.com/user-attachments/assets/34bafc34-5c0c-4bc1-9f3f-4a3c996844ee" />
