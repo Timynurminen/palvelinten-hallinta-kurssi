@@ -259,7 +259,19 @@ git commit -m "Track Ansible Configuration"
 <img width="782" height="456" alt="image" src="https://github.com/user-attachments/assets/130d1414-62ab-4ec4-9fed-c9ab3f6f082a" />
 
 
+Commit tallensi Ansible-konfiguraation versionhallintaan, jolloin muutoksia voidaan seurata ja palauttaa myöhemmin.
 
 ## f) Pari
 
 Pari hankittu.
+
+
+## Lähteet:
+
+- Chacon, S & Straub, B (2014): Pro Git, 2nd Edition: [1.3 Getting Started - What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
+- Git Documentation: [Git add](https://git-scm.com/docs/git-add)
+- Git Documentation: [Git commit](https://git-scm.com/docs/git-commit)
+- Git Documentation: [Git pull](https://git-scm.com/docs/git-pull)
+- Git Documentation: [Git push](https://git-scm.com/docs/git-push)
+- Git Documentation: [Git log](https://git-scm.com/docs/git-log)
+- GitHub Docs: [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
