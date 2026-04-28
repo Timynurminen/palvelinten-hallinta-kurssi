@@ -274,4 +274,5 @@ Pari hankittu.
 - Git Documentation: [Git pull](https://git-scm.com/docs/git-pull)
 - Git Documentation: [Git push](https://git-scm.com/docs/git-push)
 - Git Documentation: [Git log](https://git-scm.com/docs/git-log)
+- Git Documentation: [Git reset](https://git-scm.com/docs/git-reset)
 - GitHub Docs: [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
