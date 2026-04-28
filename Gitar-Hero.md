@@ -14,7 +14,7 @@
 
 - **Modified:** tiedostoa on muutettu, mutta ei lisätty committiin
 - **Staged:** tiedosto lisätty seuraavaan committiin
-- **Commited:** tiedosto tallennettu Gitin tietokantaan
+- **Committed:** tiedosto tallennettu Gitin tietokantaan
 
 #### Gitin kolme aluetta
 - **Working directory:** missä muokkaat tiedostoja
