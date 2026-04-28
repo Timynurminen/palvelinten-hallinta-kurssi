@@ -106,11 +106,20 @@ Aluksi commit epäonnistui, koska Gitin käyttäjätietoja ei ollut asennettu, j
 <img width="865" height="261" alt="image" src="https://github.com/user-attachments/assets/c053d2ba-2635-4b3a-8ed0-ccfc7dc126b1" />
 
 
+
+
 <img width="1014" height="44" alt="image" src="https://github.com/user-attachments/assets/fbcb3c0f-ab97-40e1-a547-c92a0a9c2f27" />
+
+
 
 Tämän jälkeen kaikki toimi kuten piti.
 
+
+
 <img width="832" height="400" alt="image" src="https://github.com/user-attachments/assets/91e99db1-d898-4551-b710-0911eee15d79" />
+
+
+
 
 #### Lopputulos
 
